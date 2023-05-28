@@ -1,0 +1,40 @@
+.menu-item {
+    display: flex;
+    align-items: center;
+    font-size: 1.8rem;
+    font-weight: 700;
+    padding: 8px 0;
+    padding-right: 8px;
+    color: var(--text-primary-color);
+    border-radius: 4px;
+    transition: background-color ease-in-out 200ms;
+    &.active {
+        color: var(--caret-color);
+        .icon {
+            display: none;
+        }
+        .active-icon {
+            display: flex;
+        }
+    }
+
+    &:hover {
+        background-color: var(--background-gray-color-03);
+    }
+}
+
+.list-menu {
+    margin-bottom: 8px;
+}
+
+.title {
+    margin-left: 10px;
+}
+.icon,
+.active-icon {
+    display: flex;
+}
+
+.active-icon {
+    display: none;
+}

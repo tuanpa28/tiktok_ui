@@ -1,0 +1,90 @@
+.wrapper {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 100px;
+    padding: 9px 16px;
+    border-radius: 4px;
+    font-size: 1.6rem;
+    font-weight: 700;
+    font-family: var(--font-family);
+    cursor: pointer;
+    background-color: var(--default-background);
+    border: 1px solid transparent;
+    user-select: none;
+
+    + .wrapper {
+        margin-left: 16px;
+    }
+    &.disabled {
+        pointer-events: none;
+        opacity: 0.5;
+        // cursor: not-allowed;
+    }
+}
+
+.icon + .title,
+.title + .icon {
+    margin-left: 8px;
+}
+
+.icon {
+    display: inline-flex;
+    width: 20px;
+    text-align: center;
+    justify-content: center;
+}
+
+//Button types
+.primary {
+    color: #fff;
+    background: var(--caret-color);
+
+    &:hover {
+        background: var(--background-primary-color2);
+    }
+}
+
+.outline {
+    background-color: var(--default-poper-color);
+    color: var(--caret-color);
+    border-color: currentColor;
+
+    &:hover {
+        background-color: var(--background-primary-color);
+    }
+}
+
+.outlineGrey {
+    background-color: var(--default-poper-color);
+    color: var(--text-primary-color);
+    border-color: var(--background-gray-color-12);
+    transition: all 0.1s;
+
+    &:hover {
+        border-color: var(--border-color-style);
+        background-color: var(--background-gray-color-03);
+    }
+}
+
+.rounded {
+    border-radius: 52px;
+    box-shadow: 0 2px 8px var(--box-shadow-button);
+}
+
+.text {
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+//Button sizes
+.small {
+    min-width: 88px;
+    padding: 4px 16px;
+}
+
+.large {
+    padding: 14px 16px;
+    min-width: 140px;
+}

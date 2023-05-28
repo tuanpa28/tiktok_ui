@@ -1,0 +1,38 @@
+.wrapper {
+    right: 24px;
+    position: fixed;
+    bottom: -40px;
+    z-index: 7;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-bottom: 8px;
+    transform: none;
+    transition: all 400ms cubic-bezier(0.65, 0, 0.35, 1) 0s;
+}
+.download-btn {
+    color: var(--background-gray-color-75);
+    padding: 7px;
+    border-color: var(--border-color-style);
+}
+.item {
+    margin-bottom: 12px;
+}
+.icon {
+    padding: 0;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 52px;
+    background: var(--caret-color);
+    box-shadow: 0 2px 8px var(--box-shadow-button);
+    cursor: pointer;
+    &:hover {
+        background: var(--background-primary-color2);
+    }
+}
+.show-icon-scroll {
+    bottom: 0px;
+}

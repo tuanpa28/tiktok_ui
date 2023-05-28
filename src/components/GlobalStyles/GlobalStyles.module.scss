@@ -1,0 +1,171 @@
+@import 'normalize.css';
+
+:root {
+
+    --font-family: 'ProximaNova', sans-serif;
+
+    //Default layout
+    --default-layout-header-height: 60px;
+    // --default-layout-width: 1150px;
+    --default-layout-width: 100%;
+    --default-layout-horizontal-spacer: 24px;
+
+    --default-background: #fff;
+    --text-primary-color: #161823;
+    --caret-color: #fe2c55;
+    --background-thumb-scrollbar: rgba(0, 0, 0, 0.05);
+    --default-poper-color: #fff;
+    --default-background-media: #ddd;
+    --background-primary-color: rgba(254, 44, 85, 0.06);
+    --background-primary-color2: linear-gradient(0deg, rgba(0, 0, 0, 0.06), rgba(0, 0, 0, 0.06)), #fe2c55;
+    --background-disable-color: #f5f5f5;
+    --background-gray-color-03: rgba(22, 24, 35, 0.03);
+    --background-gray-color-1: rgba(22, 24, 35, 0.1);
+    --background-gray-color-06: rgba(22, 24, 35, 0.06);
+    --background-gray-color-12: rgba(22, 24, 35, 0.12);
+    --background-gray-color-14: rgba(22, 24, 35, 0.14);
+    --background-gray-color-16: rgba(22, 24, 35, 0.16);
+    --background-gray-color-34: rgba(22, 24, 35, 0.34);
+    --background-gray-color-02: rgba(22, 24, 35, 0.2);
+    --background-gray-color-05: rgba(22, 24, 35, 0.5);
+    --background-gray-color-75: rgba(22, 24, 35, 0.75);
+    --background-gray-color-241: #f1f1f1;
+    --background-gray-color-248: #fff;
+    --background-gray-color-message: #f8f8f8;
+    --border-top: rgba(26, 25, 25, 0.07);
+    --box-shadow-button: rgb(0 0 0/6%);
+    --box-shadow-popper: rgba(0, 0, 0, 0.12) 0px 2px 12px;
+    --box-shadow-popper-2: rgba(0, 0, 0, 0.12) 0px 4px 16px;
+    --box-shadow-header: 0px 1px 1px rgba(0, 0, 0, 0.12);
+    --border-color-style: #c5c6c9;
+    --g-header-height: 60px;
+    --large-screen: 1071px;
+    --medium-screen: 767px;
+    --small-screen: 479px;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    font-size: 62.5%;
+    transition: all 0.4s cubic-bezier(0.65, 0, 0.35, 1);
+    background-color: var(--default-background);
+}
+body {
+    font-family: var(--font-family);
+    font-size: 1.6rem;
+    line-height: 1.5;
+    text-rendering: optimizeSpeed;
+    color: var(--text-primary-color);
+    overflow-y: overlay;
+}
+
+//Scrollbar CSS
+html *::-webkit-scrollbar {
+    border-radius: 0;
+    width: 8px;
+}
+html *::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background-color: rgba(22, 24, 35, 0.06);
+}
+html *::-webkit-scrollbar-track {
+    border-radius: 0;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+button,
+input,
+[tabindex] {
+    outline: none;
+    border: none;
+}
+a {
+    color: var(--text-primary-color);
+    text-decoration: none;
+}
+
+//Fonts emmbeded
+@font-face {
+    font-family: ProximaNova;
+    src: url('../../assets/fonts/Proxima-Nova-Bold.woff');
+    font-weight: 700;
+}
+@font-face {
+    font-family: ProximaNova;
+    src: url('../../assets/fonts/Proxima-Nova-Regular.woff2');
+    font-weight: 400;
+}
+@font-face {
+    font-family: ProximaNova;
+    src: url('../../assets/fonts/Proxima-Nova-Semibold.woff2');
+    font-weight: 600;
+}
+//
+@font-face {
+    font-family: SofiaPro;
+    src: url('../../assets/fonts/sofiapro-bold.woff');
+    font-weight: 700;
+}
+@font-face {
+    font-family: SofiaPro;
+    src: url('../../assets/fonts/sofiapro-medium.woff');
+    font-weight: 500;
+}
+@font-face {
+    font-family: SofiaPro;
+    src: url('../../assets/fonts/sofiapro-semibold.otf');
+    font-weight: 600;
+}
+
+// Custom tippy tooltip
+body {
+    .tippy-box {
+        border-radius: 8px;
+        background-color: rgba(84, 84, 84, 0.92);
+        color: rgb(255, 255, 255);
+        font-weight: 600;
+        font-size: 1.6rem;
+        line-height: 2.2rem;
+    }
+    .tippy-content {
+        padding: 8px 9px;
+    }
+    .tippy-arrow {
+        color: rgba(84, 84, 84, 0.92);
+    }
+}
+
+// Dark mode
+[data-theme='dark']:root {
+    --text-primary-color: hsla(0, 0%, 100%, 0.9);
+    --text-gray-color: #ffffffbf;
+    --text-gray-color2: #ffffff80;
+    --default-background: #121212;
+    --default-poper-color: #2b2a2a;
+    --black-color: #fff;
+    --white-color: #121212;
+    --white-color-2: hsla(0, 0%, 100%, 0.08);
+    --white-color-3: #252525;
+    --white-color-4: #2e2e2e;
+    --background-thumb-scrollbar: hsla(0, 0%, 100%, 0.08);
+    --background-hashtag: hsla(0, 0%, 100%, 0.08);
+    --default-background-media: #555;
+    --background-disable-color: #707070;
+    --background-gray-color-02: hsla(0, 0%, 100%, 0.2);
+    --background-gray-color-03: hsla(0, 0%, 100%, 0.04);
+    --background-gray-color-05: hsla(0, 0%, 100%, 0.5);
+    --background-gray-color-06: hsla(0, 0%, 100%, 0.122);
+    --background-gray-color-34: hsla(0, 0%, 100%, 0.34);
+    --background-gray-color-12: hsla(0, 0%, 100%, 0.12);
+    --background-gray-color-75: hsla(0, 0%, 100%, 0.75);
+    --background-gray-color-241: #252525;
+    --background-gray-color-248: rgba(49, 47, 47, 0.2);
+    --background-gray-color-message: #121212;
+    --border-top: hsla(0, 0%, 43%, 0.2);
+    --box-shadow-header: hsla(0, 0%, 100%, 0.12) 0px 1px 1px;
+    --box-shadow-popper: hsla(0, 0%, 100%, 0.12) 0px 2px 12px;
+    --border-color-style: transparent;
+}

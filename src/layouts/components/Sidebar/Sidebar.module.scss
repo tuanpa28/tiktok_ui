@@ -1,0 +1,102 @@
+.wrapper {
+    padding: 20px 0 26px;
+    background-color: var(--default-background);
+    transition: all 0.4s cubic-bezier(0.65, 0, 0.35, 1);
+}
+.sidebar-footer {
+    position: relative;
+    padding-top: 1.6rem;
+}
+.sidebar-footer::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 2rem;
+    top: 0;
+    height: 1px;
+    background: var(--background-gray-color-12);
+    transform: scaleY(0.5);
+}
+.list-link {
+    margin-bottom: 0.8rem;
+}
+.link-item {
+    color: var(--background-gray-color-05);
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 1.2rem;
+    line-height: 1.7rem;
+    display: inline-block;
+    margin-right: 0.6rem;
+    margin-top: 0.5rem;
+    &:hover {
+        text-decoration: underline;
+    }
+}
+.copyright {
+    color: var(--background-gray-color-05);
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 1.2rem;
+    line-height: 1.7rem;
+    display: inline-block;
+    margin-right: 0.6rem;
+    margin-top: 0.5rem;
+}
+.login-sidebar {
+    position: relative;
+    padding: 20px 0px 24px 0px;
+}
+.login-btn::before {
+    content: '';
+    position: absolute;
+    height: 1px;
+    left: 0px;
+    right: 0px;
+    background-color: var(--background-gray-color-12);
+    transform: scaleY(0.5);
+    top: 0;
+}
+.login-sidebar-text {
+    color: var(--background-gray-color-05);
+    font-size: 16px;
+    line-height: 22px;
+}
+.login-btn {
+    margin-top: 20px;
+    width: 100%;
+}
+.sidebar {
+    position: relative;
+    width: 240px;
+}
+.container-sidebar {
+    overflow-x: hidden;
+    overflow: visible;
+    overscroll-behavior-y: contain;
+    top: 60px;
+    bottom: 0;
+    width: 240px;
+    position: fixed;
+    z-index: 99;
+    padding-right: 12px;
+    &:hover > .divScrollbar {
+        opacity: 1;
+    }
+}
+.divScrollbar {
+    opacity: 0;
+    height: 350px;
+    position: absolute;
+    padding: 0 4px;
+    top: 0px;
+    right: 0px;
+    transform-origin: right top;
+    transition: opacity 0.5s;
+}
+.divScrollbarThum {
+    width: 6px;
+    height: 100%;
+    border-radius: 3px;
+    background: var(--background-gray-color-06);
+}

@@ -1,0 +1,85 @@
+.modal-mask {
+    align-items: center;
+    background: var(--background-thumb-scrollbar);
+    display: flex;
+    inset: 0;
+    justify-content: center;
+    position: fixed;
+    z-index: 99999;
+    transition: all 0.5s;
+}
+.wrapper {
+    border-radius: 8px;
+    transition: all 300ms cubic-bezier(0.075, 0.82, 0.165, 1) 0s;
+    transform: none;
+    margin: auto;
+    position: relative;
+    max-height: 693px;
+    height: 80%;
+    overflow: hidden;
+    background-color: var(--background-disable-color);
+}
+.container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    width: 483px;
+    padding: 48px 0px 0px;
+}
+.inner {
+    flex: 1 1 0%;
+    overflow: auto;
+}
+.title {
+    color: var(--background-gray-color-1);
+    font-family: SofiaPro;
+    font-size: 32px;
+    margin: 16px auto;
+    font-weight: 700;
+    text-align: center;
+}
+.list {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    position: relative;
+    width: 375px;
+}
+.footer {
+    color: var(--background-gray-color-1);
+
+    height: 64px;
+    border-top: 1px solid var(--background-gray-color-12);
+    margin: unset;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    font-size: 15px;
+    line-height: 18px;
+}
+.signup-btn {
+    color: var(--background-primary-color);
+    font-weight: 600;
+    margin-left: 5px;
+}
+.notify {
+    display: flex;
+}
+.close-btn {
+    position: absolute;
+    top: 24px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    z-index: 1;
+    right: 24px;
+    width: 40px;
+    height: 40px;
+    background: var(--background-gray-color-03);
+}
