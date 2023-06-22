@@ -15,7 +15,7 @@ const Home = () => {
             try {
                 const { meta } = await videoService.video(); // Call api lấy total_pages
 
-                const randomPage = Math.floor(Math.random() * meta.pagination.total_pages) + 1; // Chọn một số ngẫu nhiên từ 1 đến 100
+                const randomPage = Math.floor(Math.random() * meta.pagination.total_pages) + 1; // Chọn một số ngẫu nhiên
                 const { data } = await videoService.video(randomPage);
                 setVideos(data);
                 setLoading(false);
@@ -23,6 +23,28 @@ const Home = () => {
                 console.log(error);
             }
         })();
+    }, []);
+
+    useEffect(() => {
+        const handleScroll = async () => {
+            const { scrollTop, clientHeight, scrollHeight } = document.documentElement;
+
+            if (scrollTop + clientHeight >= scrollHeight - 10) {
+                // Người dùng đã kéo đến cuối trang!
+                setLoading(true);
+                const { meta } = await videoService.video(); // Call api lấy total_pages
+                const randomPage = Math.floor(Math.random() * meta.pagination.total_pages) + 1; // Chọn một số ngẫu nhiên
+                const { data } = await videoService.video(randomPage);
+                setVideos((prevVideos) => [...prevVideos, ...data]);
+                setLoading(false);
+            }
+        };
+
+        window.addEventListener('scroll', handleScroll);
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
     }, []);
 
     return (

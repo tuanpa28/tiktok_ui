@@ -7,10 +7,10 @@
     min-width: 420px;
 }
 .loader {
-    margin-top: 30px;
+    margin: 20px auto 10px auto;
     width: 35px;
     height: 35px;
-    display: inline-block;
+    display: block;
     box-sizing: border-box;
     position: relative;
     animation: loader 1s linear infinite;
